@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travel Hacking Guide | Kayla Stine</title>
+<meta name="description" content="How to travel for free on points and miles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage: #8CA9AD;
+  --sage-tint: #E8EEEF;
+  --sand: #DAD7CD;
+  --sand-tint: #F4F3EF;
+  --charcoal: #545454;
+  --white: #FFFFFF;
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans: "DM Sans", -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 20px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--white); color: var(--charcoal); font-family: var(--sans); font-size: 15.5px; line-height: 1.6; }
+a { color: var(--charcoal); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+strong { font-weight: 700; }
+p { margin: 0 0 .9em; }
+.wrap { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+/* Hero */
+.hero { background: var(--sage); color: var(--white); text-align: center; padding: 52px 20px 46px; }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 9vw, 62px); line-height: 1.05; margin: 0 0 10px; }
+.hero .sub { font-size: 19px; line-height: 1.35; margin: 0 auto 18px; }
+.hero .by { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--charcoal); background: var(--white); border-radius: 99px; padding: 5px 14px; margin: 0; }
+
+/* Contents */
+.contents { border: 1px solid var(--sand); border-top: 3px solid var(--sage); border-radius: 12px; padding: 20px 24px 16px; margin: 30px 0 8px; }
+.contents h2 { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 8px; }
+.contents ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 28px; }
+.contents li { break-inside: avoid; }
+.contents a { display: flex; gap: 10px; align-items: baseline; padding: 4px 0; text-decoration: none; line-height: 1.35; }
+.contents a:hover { text-decoration: underline; }
+.contents .n { font-size: 12px; font-weight: 700; min-width: 20px; }
+
+/* Sections */
+section { padding: 34px 0 6px; }
+h2.eyebrow { font-family: var(--sans); font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; line-height: 1.3; margin: 0 0 16px; padding-bottom: 9px; border-bottom: 1px solid var(--sand); }
+.lead { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.35; border-left: 3px solid var(--sage); padding-left: 16px; margin: 0 0 18px; }
+h3 { font-family: var(--serif); font-weight: 400; font-size: 23px; line-height: 1.2; margin: 26px 0 8px; }
+
+/* Callouts */
+.callout { background: var(--sand-tint); border-left: 3px solid var(--charcoal); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0; }
+.callout.sage { background: var(--sage-tint); border-left-color: var(--sage); }
+.callout.sand { background: var(--sand); }
+.callout p:last-child { margin-bottom: 0; }
+.label { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 3px; }
+
+/* Dark panel */
+.dark { background: var(--charcoal); color: var(--white); border-radius: 12px; padding: 20px 24px; margin: 18px 0; }
+.dark .label { color: var(--sand); }
+.dark p:last-child { margin-bottom: 0; }
+
+/* Headline numbers */
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 16px; }
+.tiles.two { grid-template-columns: 1fr 1fr; }
+.tile { border-radius: 10px; padding: 12px 14px; background: rgba(255,255,255,.1); line-height: 1.3; }
+.tile b { display: block; font-family: var(--serif); font-weight: 400; font-size: 27px; line-height: 1.15; margin-bottom: 2px; }
+.tile span { font-size: 13.5px; }
+.light .tile { background: var(--sand-tint); }
+.light .tile.on { background: var(--sage-tint); box-shadow: inset 0 0 0 1.5px var(--sage); }
+
+/* Numbered steps */
+.steps { list-style: none; margin: 14px 0 16px; padding: 0; }
+.steps li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; margin-bottom: 11px; }
+.steps .dot { width: 30px; height: 30px; border-radius: 50%; background: var(--charcoal); color: var(--white); font-weight: 700; font-size: 13.5px; display: flex; align-items: center; justify-content: center; }
+.steps p { margin: 3px 0 0; }
+
+/* Three-part flow */
+.flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; list-style: none; margin: 14px 0 16px; padding: 0; }
+.flow li { position: relative; background: var(--sage-tint); border-radius: 10px; padding: 12px 14px; line-height: 1.35; }
+.flow li:not(:last-child)::after { content: "\2192"; position: absolute; right: -18px; top: 50%; transform: translateY(-50%); font-size: 15px; }
+.flow b { display: block; font-family: var(--serif); font-weight: 400; font-size: 18px; margin-bottom: 2px; }
+.flow span { font-size: 14px; }
+
+/* 5/24 slots */
+.slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 14px 0 6px; }
+.slot { border-radius: 10px; text-align: center; padding: 11px 4px; font-size: 13px; font-weight: 500; line-height: 1.2; min-height: 62px; display: flex; flex-direction: column; justify-content: center; }
+.slot b { font-family: var(--serif); font-weight: 400; font-size: 17px; }
+.slot.used { background: var(--charcoal); color: var(--white); }
+.slot.free { border: 1.5px dashed var(--sage); }
+.caption { font-size: 13.5px; font-style: italic; margin: 0 0 14px; }
+
+/* Timeline */
+.timeline { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); margin: 18px 0 14px; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 12%; right: 12%; top: 7px; height: 2px; background: var(--sage); }
+.timeline li { text-align: center; padding: 0 6px; line-height: 1.3; position: relative; }
+.timeline li::before { content: ""; display: block; width: 16px; height: 16px; border-radius: 50%; background: var(--white); border: 3px solid var(--charcoal); margin: 0 auto 8px; }
+.timeline .month { display: block; font-family: var(--serif); font-size: 19px; }
+.timeline .who { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin: 1px 0 2px; }
+.timeline .name { display: block; font-size: 14px; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14.5px; line-height: 1.35; }
+th { background: var(--charcoal); color: var(--white); text-align: left; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; padding: 9px 12px; }
+th:first-child { border-radius: 8px 0 0 0; } th:last-child { border-radius: 0 8px 0 0; }
+td { padding: 9px 12px; border-bottom: 1px solid var(--sand); vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--sand-tint); }
+td:first-child { font-weight: 700; }
+
+/* Pills + cards */
+.pill { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; border-radius: 99px; padding: 3px 10px; background: var(--sand); margin: 0 5px 0 0; }
+.pill.top { background: var(--charcoal); color: var(--white); }
+.pill.tag { background: var(--sage-tint); }
+.cards { display: grid; gap: 11px; margin: 10px 0 14px; }
+.card { border: 1px solid var(--sand); border-radius: 12px; padding: 14px 18px 15px; }
+.card h4 { font-family: var(--serif); font-weight: 400; font-size: 21px; line-height: 1.2; margin: 7px 0 6px; }
+.card p { margin-bottom: .6em; }
+.card p:last-child { margin-bottom: 0; }
+.cards.two { grid-template-columns: 1fr 1fr; align-items: start; }
+.group { border-radius: 14px; padding: 18px 18px 8px; margin: 20px 0; }
+.group.personal { background: var(--sage-tint); }
+.group.business { background: var(--sand); }
+.group h3 { margin-top: 0; }
+.group .card { background: var(--white); border-color: transparent; }
+.btn { display: inline-block; background: var(--charcoal); color: var(--white); text-decoration: none; font-weight: 500; font-size: 14px; line-height: 1.3; padding: 8px 16px; border-radius: 99px; }
+.btn:hover { background: #454545; }
+
+/* Two paths */
+.paths { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+.path { border-radius: 10px; padding: 12px 16px; line-height: 1.4; background: var(--sand-tint); }
+.path.on { background: var(--sage-tint); box-shadow: inset 0 0 0 1.5px var(--sage); }
+.path b { display: block; font-family: var(--serif); font-weight: 400; font-size: 18px; }
+
+/* Checklist */
+.checks { list-style: none; margin: 8px 0 12px; padding: 0; }
+.checks li { position: relative; padding-left: 28px; margin-bottom: 7px; }
+.checks li::before { content: "\2713"; position: absolute; left: 0; top: 1px; width: 19px; height: 19px; border-radius: 50%; background: var(--sage-tint); font-size: 12px; font-weight: 700; line-height: 19px; text-align: center; }
+
+/* Links */
+.links { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; padding: 0; }
+.links a { display: block; background: var(--sand-tint); border-radius: 99px; padding: 6px 14px; font-weight: 500; font-size: 14.5px; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* Close */
+.close { background: var(--sage); margin-top: 36px; padding: 40px 0 44px; }
+.close .eyebrow-free { font-family: var(--serif); font-weight: 400; color: var(--white); text-align: center; font-size: clamp(36px, 7vw, 48px); line-height: 1.1; margin: 0 0 18px; }
+.close .box { background: var(--white); border-radius: 12px; padding: 22px 24px; }
+.close .box p:last-child { margin: 0; font-family: var(--serif); font-size: 22px; line-height: 1.25; }
+.after { padding: 36px 0; }
+.after .box { background: var(--sage-tint); border-top: 3px solid var(--sage); border-radius: 12px; padding: 22px 24px; }
+.after h2 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.2; margin: 0 0 10px; }
+.after p:last-child { margin-top: 16px; margin-bottom: 0; }
+footer { background: var(--sand); text-align: center; font-size: 13.5px; padding: 16px 20px; }
+
+@media (max-width: 640px) {
+  body { font-size: 15.5px; }
+  .hero { padding: 42px 20px 36px; }
+  .contents ol { columns: 1; }
+  .tiles { grid-template-columns: 1fr; }
+  .tiles.two { grid-template-columns: 1fr 1fr; }
+  .flow { grid-template-columns: 1fr; gap: 20px; }
+  .flow li:not(:last-child)::after { content: "\2193"; right: auto; left: 50%; top: auto; bottom: -19px; transform: none; }
+  .timeline { grid-template-columns: 1fr 1fr; row-gap: 16px; }
+  .timeline::before { display: none; }
+  .paths, .cards.two { grid-template-columns: 1fr; }
+  .slot { font-size: 11.5px; min-height: 54px; }
+  thead { display: none; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tr { border: 1px solid var(--sand); border-radius: 10px; padding: 8px 12px; margin-bottom: 8px; }
+  tbody tr:nth-child(even) td { background: none; }
+  td { border: 0; padding: 2px 0; display: flex; justify-content: space-between; gap: 12px; }
+  td:first-child { font-family: var(--serif); font-weight: 400; font-size: 18px; }
+  td[data-label]::before { content: attr(data-label); font-size: 12px; font-weight: 700; }
+}
+</style>
+</head>
+<body id="top">
+
+<header class="hero">
+  <h1>Travel Hacking</h1>
+  <p class="sub">How to travel for free on points and miles</p>
+  <p class="by">By Kayla Stine</p>
+</header>
+
+<main>
+<div class="wrap">
+
+<nav class="contents" aria-label="Contents">
+  <h2>What's inside</h2>
+  <ol>
+    <li><a href="#how-this-works"><span class="n">01</span>How this works</a></li>
+    <li><a href="#credit"><span class="n">02</span>Will this hurt my credit?</a></li>
+    <li><a href="#before-you-apply"><span class="n">03</span>Before you apply</a></li>
+    <li><a href="#first-card"><span class="n">04</span>Which card to get first</a></li>
+    <li><a href="#minimum-spend"><span class="n">05</span>Hitting your minimum spend</a></li>
+    <li><a href="#referrals"><span class="n">06</span>Referrals</a></li>
+    <li><a href="#using-points"><span class="n">07</span>Using your points</a></li>
+    <li><a href="#closing-cards"><span class="n">08</span>Keeping or closing cards</a></li>
+    <li><a href="#denied"><span class="n">09</span>If you get denied</a></li>
+    <li><a href="#learn-more"><span class="n">10</span>Where to learn more</a></li>
+  </ol>
+</nav>
+
+<section id="how-this-works">
+  <h2 class="eyebrow">01 / How this works</h2>
+  <p class="lead">This guide is meant to give you an intro to travel hacking and help you get started.</p>
+  <div class="callout">
+    <p class="label">Not in the US?</p>
+    <p>I'm in the US, so that's what this guide covers. The concept is the same, but cards and some information might be different in other countries.</p>
+  </div>
+  <h3>Overview</h3>
+  <p>The quick overview of travel hacking is that you open credit cards to get the one-time big sign-up bonus. You then use those points to book airfare, hotels, or even rental cars. That's it.</p>
+  <ol class="flow">
+    <li><b>Open a card</b><span>for the one-time big sign-up bonus</span></li>
+    <li><b>Hit the minimum spend</b><span>and you get your points</span></li>
+    <li><b>Book your trip</b><span>airfare, hotels, or even rental cars</span></li>
+  </ol>
+  <div class="callout sage">
+    <p class="label">What is a minimum spend?</p>
+    <p>The minimum spend is the amount of money you need to put on a new credit card within a set time to get the bonus, like $3,000 in 3 months. This is spending you're ALREADY doing, like groceries and utilities.</p>
+  </div>
+  <p>If you're a credit card user already, you can look at it like rather than earning 1 point per dollar spent and getting 3,000 points for $3,000 spending on your card, you can get up to 100,000 points for that same $3,000 spending by taking advantage of a single sign up bonus.</p>
+  <div class="tiles two light">
+    <div class="tile"><b>3,000 points</b><span>$3,000 spent at 1 point per dollar</span></div>
+    <div class="tile on"><b>Up to 100,000</b><span>that same $3,000 with a sign up bonus</span></div>
+  </div>
+  <div class="dark">
+    <p class="label">Our example</p>
+    <p>My husband and I booked our last all-inclusive for 175,000 points. We were able to get 200,000 points with just TWO credit cards.</p>
+    <div class="tiles">
+      <div class="tile"><b>175,000</b><span>points for our last all-inclusive</span></div>
+      <div class="tile"><b>2 cards</b><span>to get 200,000 points</span></div>
+      <div class="tile"><b>4+ years</b><span>without paying for a flight</span></div>
+    </div>
+    <p>We've taken two all-inclusive vacations completely paid for, stayed in tons of hotels for free, and haven't paid for a flight in over 4 years.</p>
+  </div>
+</section>
+
+<section id="credit">
+  <h2 class="eyebrow">02 / Will this hurt my credit?</h2>
+  <p>Opening a new credit card will ding your credit score by a few points initially, but that usually fades within a few months. As long as you are always paying your card off on time, and only open one card every three months, your credit score should be just fine. Showing you're a responsible credit card user actually HELPS your credit score.</p>
+  <div class="callout sage">
+    <p class="label">Pay it off every month</p>
+    <p>This only works if you pay your card off in full every month. The interest will cost you more than your points are worth, so if you're carrying a balance, pay that down before you start.</p>
+    <p>The one exception is using a card to invest in a business. If your card has a 0% intro rate, it can be okay to make the minimum payments while you get your business up and running. Just know when the 0% ends, and have it paid off before then or get a 0% interest transfer card.</p>
+    <p>Some people also start their business on a card with interest. That's a business decision, not a points decision, so know your rate and have a plan to pay it off.</p>
+  </div>
+  <div class="callout sand">
+    <p class="label">About to buy a house?</p>
+    <p>If you're about to buy a house though, do not open any cards until after you've closed.</p>
+  </div>
+  <p>Since you can open one card every three months, that means you and your spouse could open 8 cards a year between the two of you.</p>
+</section>
+
+<section id="before-you-apply">
+  <h2 class="eyebrow">03 / Before you apply</h2>
+  <p class="lead">I highly recommend that anyone starting out start with Chase credit cards due to their 5/24 rule.</p>
+  <h3>What is the 5/24 rule?</h3>
+  <p>The 5/24 rule means you can only open 5 credit cards within 24 months. If you try to open a 6th card in 24 months, Chase will deny you. Their 5 slots include ANY credit card, it doesn't have to just be a Chase card.</p>
+  <p>So say you applied for a Kohls credit card, an Amazon credit card, and a Chase freedom card in the last two years, (moving forward do not apply for any store credit cards, they are not worth it compared to the other offers out there) you've now used three of your five slots.</p>
+  <div class="slots">
+    <div class="slot used">Kohls</div>
+    <div class="slot used">Amazon</div>
+    <div class="slot used">Chase Freedom</div>
+    <div class="slot free">Open</div>
+    <div class="slot free">Open</div>
+  </div>
+  <p class="caption">Three of your five slots used</p>
+  <p>Before you start applying for cards, think about any cards you or your spouse have applied for in the past two years. Again, this could have been something as simple as an Old Navy card. They all count. You want to know where you stand with the 5/24 rule going into this.</p>
+  <p>The one caveat is that business credit cards do not count towards these spots, BUT, if you have filled all 5 spots, you won't be able to get a business card.</p>
+  <p>So start with Chase, and down the road move to Amex, Capital One or another credit card company.</p>
+  <div class="callout sage">
+    <p class="label">Spouse tip</p>
+    <p><strong>Don't add your spouse as an authorized user.</strong> This will take up one of their 5/24 spots.</p>
+  </div>
+  <h3>Track everything</h3>
+  <p>Here's the link to the sheet I use to track all of our cards, minimum spend date, and other info. KEEP TRACK! You will regret this down the road if you don't. All info on this sheet is just an example.</p>
+  <ol class="steps">
+    <li><span class="dot">1</span><p>Make a copy of this document and erase my examples.</p></li>
+    <li><span class="dot">2</span><p>Every time you apply for a card, fill in all the info.</p></li>
+    <li><span class="dot">3</span><p>Set reminders for when your minimum spend is due so you don't forget.</p></li>
+  </ol>
+  <p><a class="btn" href="https://docs.google.com/spreadsheets/d/1ehe7WgD74vXuq8-g1udaNJrutSPGFTCFjf7vf-1gxdc/edit?usp=sharing" target="_blank" rel="noopener">Open my tracking sheet</a></p>
+  <p>The Travel Freely app is also a great app to keep track of your cards and you can see all of the benefits that come with each card.</p>
+</section>
+
+<section id="first-card">
+  <h2 class="eyebrow">04 / Which card to get first</h2>
+  <p class="lead">I highly recommend starting with either the Sapphire Preferred or the Ink Business Unlimited.</p>
+  <p>You may have reasons to go a different route or there might be a good promo on another card worth taking advantage of, do your research, but this is typically what I'd recommend.</p>
+  <p>When you're looking for a card to open, you want to look at the requirements to get the bonus. For instance, "spend $3,000 in 3 months". Some are higher like $5,000 in 3 months. Just make sure you will be able to spend that much money in that amount of time. (Remember, you can put all your bills on this credit card and pay it off right away)</p>
+
+  <h3>The cards at a glance</h3>
+  <p>Here are my recommendations. The apply buttons below are my referral links, which means I earn a bonus if you're approved through them. It doesn't cost you anything to use a referral link, and I never give one if you can get a better deal without it. Thank you so much for using them!</p>
+  <table>
+    <thead><tr><th>Card</th><th>Bonus</th><th>Minimum spend</th><th>Annual fee</th></tr></thead>
+    <tbody>
+      <tr><td>Chase Sapphire Preferred</td><td data-label="Bonus">75,000 points</td><td data-label="Minimum spend">$5,000 in 3 months</td><td data-label="Annual fee">$95</td></tr>
+      <tr><td>Chase Freedom (Unlimited or Flex)</td><td data-label="Bonus">20,000 points</td><td data-label="Minimum spend">$500 in 3 months</td><td data-label="Annual fee">None</td></tr>
+      <tr><td>IHG One Rewards Credit Card</td><td data-label="Bonus">125,000 points</td><td data-label="Minimum spend">$2,000 in 3 months</td><td data-label="Annual fee">None</td></tr>
+      <tr><td>Ink Business Cash</td><td data-label="Bonus">75,000 points</td><td data-label="Minimum spend">$6,000 in 3 months</td><td data-label="Annual fee">None</td></tr>
+      <tr><td>Ink Business Unlimited</td><td data-label="Bonus">75,000 points</td><td data-label="Minimum spend">$6,000 in 3 months</td><td data-label="Annual fee">None</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <p><strong>Note:</strong> these offers may be different from when I last edited this guide in November 2026.</p>
+  </div>
+
+  <div class="group personal">
+  <h3>Personal cards</h3>
+  <div class="cards">
+    <div class="card">
+      <span class="pill top">Start here</span><span class="pill">Personal</span>
+      <h4>Chase Sapphire Preferred</h4>
+      <p>I do highly recommend this card, you'll need it if you want to transfer points to different travel partners. It does have an annual fee of $95, but you're getting at minimum $750 back from this card (or a whole lot more when you redeem for travel).</p>
+      <p>When you click the link, choose the Sapphire Preferred.</p>
+      <p><a class="btn" href="https://www.referyourchasecard.com/19y/EKDCM1J7HT" target="_blank" rel="noopener">Apply for Sapphire Preferred</a></p>
+    </div>
+    <div class="cards two" style="margin:0">
+      <div class="card">
+        <span class="pill">Personal</span><span class="pill tag">Smaller minimum spend</span>
+        <h4>Chase Freedom (Unlimited or Flex)</h4>
+        <p>This is a slower start, but, if you want to try one out with a smaller minimum spend first, this would be the way to go.</p>
+        <p><a class="btn" href="https://www.referyourchasecard.com/18s/QNQH9ZNXXP" target="_blank" rel="noopener">Apply for Chase Freedom</a></p>
+      </div>
+      <div class="card">
+        <span class="pill">Personal</span><span class="pill tag">Hotels</span>
+        <h4>IHG One Rewards Credit Card</h4>
+        <p>They have so many properties around the world from 19 different hotel brands. It's been really nice to have points with them for quick random stays in the states, but they also have gorgeous resorts.</p>
+        <p><a class="btn" href="https://www.referyourchasecard.com/210z/3CL1SE26BM" target="_blank" rel="noopener">Apply for an IHG card</a></p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="group business">
+  <h3>Business cards</h3>
+  <p>I'd recommend starting with one of these. Neither have an annual fee.</p>
+  <div class="cards two">
+    <div class="card">
+      <span class="pill top">Start here</span><span class="pill">Business</span>
+      <h4>Ink Business Unlimited</h4>
+      <p>$6,000 minimum spend in 3 months for 75,000 points.</p>
+      <p><a class="btn" href="https://www.referyourchasecard.com/21h/OT9I8YKMPT" target="_blank" rel="noopener">Apply for Ink Unlimited</a></p>
+    </div>
+    <div class="card">
+      <span class="pill">Business</span>
+      <h4>Ink Business Cash</h4>
+      <p>$6,000 minimum spend in 3 months for 75,000 points (it will say $750 which translates to 75k points).</p>
+      <p><a class="btn" href="https://www.referyourchasecard.com/21h/Z00J6XWAIV" target="_blank" rel="noopener">Apply for Ink Cash</a></p>
+    </div>
+  </div>
+
+  </div>
+
+  <h3>What counts as a business</h3>
+  <p>Business cards can get you SO far in the points and miles world. And the cool part is, anyone can get approved for them. There are tons of things that can count as a business in the credit card world, and the business card does not have to be exclusively for business purchases.</p>
+  <p>If you have an actual business, you can use that info. If you don't think you have a business, you might be wrong. All of these count as a business in the bank's eyes:</p>
+  <ul class="checks">
+    <li>Selling things on facebook or ebay</li>
+    <li>Making money on the side</li>
+    <li>Running a blog or monetizing social media in any way</li>
+    <li>Babysitting, tutoring, or anything like that</li>
+  </ul>
+  <p>You can also apply for a business you're just getting started, as long as everything you put on the application is true. All that to say, it's pretty much as simple as getting a personal card. If you don't have an LLC you would be considered a sole proprietor and can use your personal info for the business.</p>
+  <div class="callout sage">
+    <p class="label">Stay consistent</p>
+    <p>Whatever info you use for a business card application, write it down so that you remember what you put for your next business card application.</p>
+  </div>
+</section>
+
+<section id="minimum-spend">
+  <h2 class="eyebrow">05 / Hitting your minimum spend</h2>
+  <p class="lead">Once you get your card in the mail, put ALL your spending on that card.</p>
+  <ol class="steps">
+    <li><span class="dot">1</span><p>Move your recurring donations to that card, utilities, groceries, business expenses, etc.</p></li>
+    <li><span class="dot">2</span><p>Then when you hit the minimum spend, congrats! You get your points!</p></li>
+    <li><span class="dot">3</span><p>Usually the points will post soon after your current statement closes and then you're free to use them.</p></li>
+    <li><span class="dot">4</span><p>You can apply for your next card under your spouse's name and repeat the process.</p></li>
+  </ol>
+  <div class="callout sand">
+    <p class="label">Annual fees</p>
+    <p>If the card you're opening has an annual fee, that annual fee does NOT count towards your minimum spend.</p>
+  </div>
+  <div class="callout">
+    <p class="label">Watch your returns</p>
+    <p>When you're putting spending on your card, pay attention to returns. You don't want to hit your goal and then later have to return something and now you're below the requirement. Because of this, I always like to go well past the minimum spend requirement.</p>
+  </div>
+</section>
+
+<section id="referrals">
+  <h2 class="eyebrow">06 / Referrals</h2>
+  <p class="lead">Chase rewards you for referring people to the credit cards.</p>
+  <p>You must have a credit card in that "family" of cards to refer someone. For example, there are the Freedom cards, Sapphire cards, Ink cards, etc. So if you have a card in that "family" of cards, you can refer to it.</p>
+  <p>Say you have a Sapphire card and now your spouse is ready to apply for it. You would send them the referral link, and now you not only get their big sign up bonus, but you get a generous referral bonus too!</p>
+  <div class="paths">
+    <div class="path"><b>If you apply directly on their website</b>The referral bonus stays with the bank.</div>
+    <div class="path on"><b>If you apply with a referral link</b>The referral bonus goes to the person who referred you.</div>
+  </div>
+  <p>My links are in the <a href="#first-card">card list above</a> and I'd be so grateful if you'd use them. But again, once you have a card in each "family" of cards, use your link to refer your spouse (or friends and family!).</p>
+
+  <h3>A simple first year</h3>
+  <p>Here's an example of what you could do the next year to keep it simple:</p>
+  <ol class="timeline">
+    <li><span class="month">Sept</span><span class="who">You</span><span class="name">Sapphire Preferred</span></li>
+    <li><span class="month">Dec</span><span class="who">Spouse</span><span class="name">Ink Business Unlimited</span></li>
+    <li><span class="month">March</span><span class="who">You</span><span class="name">Ink Business Unlimited</span></li>
+    <li><span class="month">June</span><span class="who">Spouse</span><span class="name">Sapphire Preferred</span></li>
+  </ol>
+  <p>Or mix it up, add in additional cards if you can hit the minimum spend! This is just one example of how easy you can make it.</p>
+</section>
+
+<section id="using-points">
+  <h2 class="eyebrow">07 / Using your points</h2>
+  <h3 style="margin-top:0">Banks and travel partners</h3>
+  <p>Your points live with the bank that gave you the card. You can book travel through the bank, or you can transfer your points to one of their travel partners, which are the airlines and hotels they work with.</p>
+  <p>Each bank has its own list of partners. Here are a few examples:</p>
+  <table>
+    <thead><tr><th>Bank</th><th>Airlines</th><th>Hotels</th></tr></thead>
+    <tbody>
+      <tr><td>Chase</td><td data-label="Airlines">United, Southwest, JetBlue, British Airways</td><td data-label="Hotels">Hyatt, Marriott, IHG</td></tr>
+      <tr><td>Amex</td><td data-label="Airlines">Delta, JetBlue, British Airways</td><td data-label="Hotels">Hilton, Marriott</td></tr>
+    </tbody>
+  </table>
+  <p>So if you want to fly Delta, you'd need Amex points. If you want to stay at a Hyatt, you'd need Chase points. That's why it helps to think about where you want to go before you pick a card, and then research which banks partner with those airlines and hotels.</p>
+  <p>To transfer Chase points, you'll need a card like the Sapphire Preferred. We keep ours and just pay the $95 annual fee each year so that we can transfer our points.</p>
+  <div class="callout sand">
+    <p class="label">Before you transfer</p>
+    <p>Make sure the flight or hotel you want is available, because once points are transferred you can't move them back. Partners also change, so check your bank's website for the current list.</p>
+  </div>
+  <h3>Travel vs. cash</h3>
+  <p>You can absolutely redeem points for cash if you want. It's usually 1 point = 1 cent. If you want to travel though, you will get so much more for your money.</p>
+  <div class="callout">
+    <p class="label">Do points expire?</p>
+    <p>It depends on the card. Chase and Amex points don't expire as long as your card stays open. Hotel and airline programs have their own rules. With an IHG card, you have to use the card once every 12 months to keep your points.</p>
+    <p>If you are going to close a Chase card, I would transfer the points to another one of your Chase cards before closing it. You can also easily transfer points with your spouse.</p>
+  </div>
+  <div class="callout sage">
+    <p class="label">Point values differ</p>
+    <p>For example: 100,000 Chase points do not equal 100,000 IHG points (the IHG card is a Chase card, but you're earning IHG points and the values differ).</p>
+  </div>
+</section>
+
+<section id="closing-cards">
+  <h2 class="eyebrow">08 / Keeping or closing cards</h2>
+  <p class="lead">Do NOT close cards unless you have to.</p>
+  <p>This actually hurts your credit score. I know some people don't like to have a ton of cards open, I get it. But after you've hit the minimum spend and have received your bonus, just stick the cards in a wallet in your closet or something and forget about them.</p>
+  <p>The only reason you should close a card is if it has an annual fee that you don't want to pay, or if you want to re-apply and get the sign-up bonus again. But even then, you could see if you could downgrade it rather than closing it. The Sapphire sign-up bonus is now once per lifetime. For other Chase cards the rules vary, so always read the offer terms before you re-apply.</p>
+  <h3>If you're going to close a card</h3>
+  <ul class="checks">
+    <li>Wait until you've had it for at least one year. If you close prior to 12 months, you risk having your points clawed back.</li>
+    <li>If it has an annual fee, actually wait until the annual fee posts, and then call them within 30 days to close the card. They will refund you the fee.</li>
+    <li>You can also downgrade a card to a no annual fee card. Ask about this when you call.</li>
+  </ul>
+</section>
+
+<section id="denied">
+  <h2 class="eyebrow">09 / If you get denied</h2>
+  <p class="lead">Don't give up if you get denied.</p>
+  <p>Down the road as you get more cards, you might have an application get denied. You can always call them to dispute it and they often just need a little more info and will then approve you. There are tons of articles out there about what you can do if this happens.</p>
+  <div class="dark">
+    <p class="label">On the phone</p>
+    <p>If you're ever on the phone with Chase, or any bank, don't let them know you're a travel hacker. You just "like their credit cards" or something generic like that.</p>
+  </div>
+</section>
+
+<section id="learn-more">
+  <h2 class="eyebrow">10 / Where to learn more</h2>
+  <p>Websites and Instagram accounts I like:</p>
+  <ul class="links">
+    <li><a href="https://thepointsguy.com/guide/all-inclusive-resorts-points/" target="_blank" rel="noopener">thepointsguy.com</a></li>
+    <li><a href="https://frequentmiler.com/" target="_blank" rel="noopener">frequentmiler.com</a></li>
+    <li><a href="https://pointstalksquad.com/" target="_blank" rel="noopener">pointstalksquad.com</a></li>
+    <li><a href="https://www.instagram.com/traveldreamersfamily/" target="_blank" rel="noopener">@traveldreamersfamily</a></li>
+    <li><a href="https://www.instagram.com/katiestraveltricks/" target="_blank" rel="noopener">@katiestraveltricks</a></li>
+  </ul>
+</section>
+
+</div>
+
+<section class="close" id="just-start">
+  <div class="wrap">
+    <h2 class="eyebrow-free">Just start!</h2>
+    <div class="box">
+      <p>My best advice, just start! You don't need to know it all before you begin. Start with simply getting your first card and put all your spending on it. That gives you the next three months to keep learning and figuring out your goals while you work towards your first minimum spend.</p>
+      <p>Don't wait to get a card until you figure it all out, trust me, you'll regret it.</p>
+      <p>Enjoy your free travels!</p>
+    </div>
+  </div>
+</section>
+<section class="after">
+  <div class="wrap">
+    <div class="box">
+    <h2>One more thing</h2>
+    <p>Points are only a small part of what I do. My real passion is helping women change their finances through an online business they can run from home.</p>
+    <p>My business gives me the time freedom to travel whenever I want. It also helps us afford the activities, the food, and everything else that points don't cover on vacation.</p>
+    <p>If you'd love that for your family too, my mentor Samara walks through how it works in a free webclass. It's just 35 minutes.</p>
+    <p><a class="btn" href="https://www.kaylastine.com" target="_blank" rel="noopener">Watch the free webclass</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Kayla Stine &nbsp;·&nbsp; <a href="#top">Back to the top</a></footer>
+
+</body>
+</html>
